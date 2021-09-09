@@ -1,5 +1,6 @@
 using System;
 using Xunit;
+using System.IO;
 
 
 namespace assignment.Tests
@@ -11,7 +12,9 @@ namespace assignment.Tests
         {   
                 var number = 40;
                 var program = new Program();
+
                 bool actual = program.IsLeapYear(number);
+
                 Assert.Equal(true, actual);
         }
 
@@ -20,7 +23,9 @@ namespace assignment.Tests
         {   
                 var number = 800;
                 var program = new Program();
+
                 bool actual = program.IsLeapYear(number);
+
                 Assert.Equal(true, actual);
         }
 
@@ -29,8 +34,37 @@ namespace assignment.Tests
         {   
                 var number = 1000;
                 var program = new Program();
+
                 bool actual = program.IsLeapYear(number);
+
                 Assert.Equal(false, actual);
         }
+
+        [Fact]  
+        public void Input_LeapYear()
+        {
+                
+        
+        }
+
+        [Fact]  
+        public void Input_NotLeapYear()
+        {
+            
+        }
+
+      /*  [Fact] 
+        [ExpectedException(typeof(FormatException))]
+        public void Input_NotInteger()
+        {
+
+            var junk = "sk";
+            var program = new Program();
+            program.IsLeapYear(junk);
+
+
+        }
+*/
+
     }
 }
